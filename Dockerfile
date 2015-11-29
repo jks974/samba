@@ -8,6 +8,8 @@ RUN apt-get install -y samba
 # Copy script inside container
 COPY start.sh ./start.sh
 
+RUN chmod 0775 start.sh
+
 VOLUME /etc/samba
 VOLUME /data
 
